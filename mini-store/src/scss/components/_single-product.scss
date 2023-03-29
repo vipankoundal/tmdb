@@ -1,0 +1,32 @@
+.single-product {
+  border-radius: 25px;
+  overflow: hidden;
+  height: 100%;
+  img {
+    height: 180px;
+    object-fit: cover;
+  }
+  &__short {
+    background-color: $white;
+    padding: $space-lg;
+    height: 100%;
+    p {
+      line-height: 1.2rem;
+    }
+    h4 {
+      text-transform: capitalize;
+      margin-bottom: $space-md;
+    }
+    .more {
+      @include flex-properties(flex, space-between, center);
+      padding: $space-md 0 0 0;
+      a {
+        text-decoration: none;
+      }
+      &__price {
+        font-size: $text-md;
+        font-weight: $fw-bold;
+      }
+    }
+  }
+}

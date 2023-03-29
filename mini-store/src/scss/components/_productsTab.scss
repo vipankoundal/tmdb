@@ -1,0 +1,17 @@
+.categorytab {
+  gap: $space-md;
+  @include flex-properties();
+  a {
+    border: $grey 1px solid;
+    border-radius: 20px;
+    padding: $space-md $space-xl;
+    color: $blue;
+    font-size: $text-md;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+}

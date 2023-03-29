@@ -1,0 +1,16 @@
+.happy-client {
+  padding: $space-lg;
+  color: $blue;
+  margin-bottom: $space-xl;
+  h3 {
+    font-weight: $fw-regular;
+    margin-bottom: $space-md;
+    p {
+      font-size: $text-sm;
+    }
+  }
+  &:hover {
+    background-color: $white;
+    border-radius: $space-lg;
+  }
+}

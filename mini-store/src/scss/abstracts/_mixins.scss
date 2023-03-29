@@ -1,0 +1,45 @@
+@mixin flex-properties(
+  $flex: flex,
+  $justify-content: center,
+  $align-items: center
+) {
+  display: $flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin breakpoints-down($name) {
+  @each $label, $size in $breakpoints-down {
+    @if $name == $label {
+      @media (max-width: map-get($breakpoints-down, $name)) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin breakpoints-up($name) {
+  @each $label, $size in $breakpoints-up {
+    @if $name == $label {
+      @media (min-width: map-get($breakpoints-up, $name)) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin button-size($single-product: true) {
+  @if $single-product {
+    padding: $space-sm $space-md;
+    background: transparent;
+    color: $blue;
+  } @else {
+    padding: $space-md $space-lg;
+    background: linear-gradient(
+      to left,
+      lighten($red-light, 10%) 0%,
+      $red 100%
+    );
+    color: #fff;
+  }
+}

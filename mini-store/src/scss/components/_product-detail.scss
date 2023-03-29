@@ -1,0 +1,39 @@
+.product-details {
+  .container__row {
+    @include flex-properties();
+    height: calc(100vh - 15vh);
+    .product-details-left {
+      img {
+        width: 100%;
+        border-radius: 25px;
+        overflow: hidden;
+      }
+    }
+    .product-details-right {
+      h2 {
+        margin-bottom: $space-md;
+      }
+      ul {
+        margin: $space-md 0;
+        li {
+          list-style: none;
+          background: url(https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/checked.png)
+            left center no-repeat;
+          background-size: 18px;
+          padding-left: 1.7rem;
+          margin: 0.4rem 0;
+          font-weight: 600;
+          opacity: 0.9;
+          line-height: 20px;
+        }
+      }
+      .price {
+        border-top: 1px solid $grey;
+        border-bottom: 1px solid $grey;
+        padding-top: $space-md;
+        padding-bottom: $space-md;
+        @include flex-properties(flex, space-between, center);
+      }
+    }
+  }
+}

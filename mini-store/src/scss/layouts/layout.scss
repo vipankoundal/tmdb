@@ -1,0 +1,63 @@
+.container {
+  width: 100%;
+  padding: 0 $space-2xl;
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (min-width: ($grid__bp--col * 1px)) {
+    @for $i from 1 through $grid__cols {
+      &__col-#{$i} {
+        flex-basis: calc(100 / ($grid__cols / $i)) * 1%;
+      }
+    }
+  }
+  @media screen and (min-width: ($grid__bp--sm * 1px)) {
+    @for $i from 1 through $grid__cols {
+      &__col-sm-#{$i} {
+        flex-basis: calc(100 / ($grid__cols / $i)) * 1%;
+      }
+    }
+  }
+
+  @media screen and (min-width: ($grid__bp--md * 1px)) {
+    @for $i from 1 through $grid__cols {
+      &__col-md-#{$i} {
+        flex-basis: calc(100 / ($grid__cols / $i)) * 1%;
+      }
+    }
+  }
+
+  @media screen and (min-width: ($grid__bp--lg * 1px)) {
+    @for $i from 1 through $grid__cols {
+      &__col-lg-#{$i} {
+        flex-basis: calc(100 / ($grid__cols / $i)) * 1%;
+      }
+    }
+  }
+
+  @media screen and (min-width: ($grid__bp--xl * 1px)) {
+    @for $i from 1 through $grid__cols {
+      &__col-xl-#{$i} {
+        flex-basis: calc(100 / ($grid__cols / $i)) * 1%;
+      }
+    }
+  }
+
+  @include breakpoints-down(md) {
+    padding: 0 $space-md;
+  }
+}
+
+section {
+  padding-top: $space-3xl;
+  @include breakpoints-down(md) {
+    padding-top: $space-md;
+  }
+}
